@@ -1,0 +1,21 @@
+<h1>Media Trends</h1>
+<h2><%= link_to 'Create New Tweet', new_trend_url %></h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Message</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @trends.each do |tweet| %>
+    <tr>
+      <td><%= tweet.title %></td>
+      <td><%= tweet.text %></td>
+      <td><%= link_to 'Show', trend_url(tweet) %></td>
+      <td><%= link_to 'Edit', edit_trend_url(tweet) %></td>
+      <td><%= link_to 'Destroy', trend_url(tweet),
+              method: :delete,
+              data: { confirm: 'Are you sure? Do you like to delete this Post?' } %></td>
+    </tr>
+  <% end %>
+</table>
