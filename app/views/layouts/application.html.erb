@@ -3,12 +3,27 @@
   <head>
     <title>RailsApp</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+    <ul >
+      <li ><%= link_to 'Home', controller: 'media' %></li>
+      <li ><%= link_to 'Open Trends', controller: 'trends' %></li>
+      <li ><%= link_to 'Create Tweet', new_trend_url %></li>
+    </ul>
+  </header>
+  
     <%= yield %>
+    
+    <footer>
+    <p>TwitterClone Application</p>
+    <p>© 2018 Copyright MAGEZA Adolphe.</p>
+  </footer>
+
   </body>
 </html>

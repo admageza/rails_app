@@ -1,5 +1,4 @@
-<h1>Media Trends</h1>
-<h2><%= link_to 'Create New Tweet', new_trend_url %></h2>
+<h1>Media Trends List</h1>
 <table>
   <tr>
     <th>Name</th>
@@ -11,11 +10,11 @@
     <tr>
       <td><%= tweet.title %></td>
       <td><%= tweet.text %></td>
-      <td><%= link_to 'Show', trend_url(tweet) %></td>
-      <td><%= link_to 'Edit', edit_trend_url(tweet) %></td>
-      <td><%= link_to 'Destroy', trend_url(tweet),
+      <td><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to 'Show', trend_url(tweet) %></button></td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to 'Edit', edit_trend_url(tweet) %></button></td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to 'Destroy', trend_url(tweet),
               method: :delete,
-              data: { confirm: 'Are you sure? Do you like to delete this Post?' } %></td>
+              data: { confirm: 'Are you sure? Do you like to delete this Post?' } %></button></td>
     </tr>
   <% end %>
 </table>

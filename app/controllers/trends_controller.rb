@@ -28,7 +28,7 @@ class TrendsController < ApplicationController
         @tweet = Post.find(params[:id])
  
       if @tweet.update(tweet_params)
-        redirect_to trends_url
+         redirect_to new_trend_url
       else
          render 'edit'
       end
